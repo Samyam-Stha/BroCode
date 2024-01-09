@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        text-align: center;
+      }
+      input {
+        max-width: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Random Number Generator</h1>
+    Maximum: <input type="number" id="max" value="100" /> Minimum:
+    <input type="number" id="min" value="0" /><br />
+
+    <h2 id="num">0</h2>
+
+    <button id="generate">Generate</button>
+
+    <script>
+      let num = document.getElementById("num");
+      let generateBtn = document.getElementById("generate");
+
+      generateBtn.onclick = function () {
+        let max = Number(document.getElementById("max").value);
+        let min = Number(document.getElementById("min").value);
+        let random = Math.round(Math.random() * (max - min)) + min;
+
+        num.textContent = random;
+      };
+    </script>
+  </body>
+</html>
