@@ -1,22 +1,82 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;1,400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url(sky.jpg) no-repeat center fixed;
+  background-size: cover;
 }
-.box{
-    border: 1px black solid;
-    padding: 25px;
-    height: 100vh;
-    text-align: center;
-}
-#temprature{
-    
+.box {
+  box-shadow: 0px 0px 10px 3px;
+  border-radius: 15px;
+  padding: 25px;
+
+  text-align: center;
+  line-height: 35px;
+  backdrop-filter: blur(10px);
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.heading {
+  background: linear-gradient(
+    45deg,
+    #f32170,
+    #ff6b08,
+    #cf23cf,
+    rgb(49, 35, 255)
+  );
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+/* Firefox */
+#temprature {
+  font-size: 20px;
+  height: 30px;
+  padding: 25px 0px;
+  margin: 25px;
+  border: solid black;
+  background: transparent;
+  text-align: center;
+}
+#temprature:focus {
+  outline: none;
+}
+
+.box label,
+p {
+  font-size: 20px;
+}
+
+#submit {
+  font-size: 18px;
+  color: ivory;
+  margin: 10px 0;
+  cursor: pointer;
+  padding: 12px 40px;
+  background: transparent
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+  border: 1px solid black;
+  box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+  outline: none;
+  border-radius: 15px;
+  transition: 0.2s all;
+}
+#submit:active {
+  transform: scale(0.98);
+  /* Scaling button to 0.98 to its original size */
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+  /* Lowering the shadow */
+}

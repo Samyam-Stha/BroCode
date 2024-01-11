@@ -8,27 +8,31 @@
   </head>
   <body>
     <div class="box">
-        <h1>Convert Temprature</h1>
-        <input type="number" id="temprature" value="0" /><br>
-        <input type="radio" name="deg" id="celcius" checked />Celsius to Farenheit
+        <h1 class="heading">Tempratuture Converter</h1>
+        <input type="number" id="temprature" value="0" /><span id="extra"></span>
+        <br>
+        <input type="radio" name="deg" id="celcius" checked /> <label for="celcius">Celsius to Fahrenheit</label>
         <br />
-        <input type="radio" name="deg" id="farenheit" /> Farenheit to Celcius <br />
-        <br />
-        <input type="submit" id="submit" onclick="convert()" />
-        <p id="result"></p>
+        <input type="radio" name="deg" id="Fahrenheit"  />  <label for="Fahrenheit">Fahrenheit to Celcius</label> <br />
+      
+        <button type="submit" name="Convert" id="submit" onclick="convert()" value="Convert"/>Convert</button>
+        <p id="result">32.0 °F</p>
     </div>
 
     <script>
       let submit = document.getElementById("submit");
-
+      const celcius = document.getElementById("celcius");
+        const Fahrenheit = document.getElementById("Fahrenheit");
+        const extra= document.getElementById("extra");
       function convert() {
-        const celcius = document.getElementById("celcius");
-        const farenheit = document.getElementById("farenheit");
+       
         const temprature = document.getElementById("temprature").value;
         let result = document.getElementById("result");
+        
         let temp;
 
         if (celcius.checked) {
+            
           temp = (temprature * 9) / 5 + 32;
 
           result.textContent = temp.toFixed(1) + " °F";
@@ -39,6 +43,10 @@
           result.textContent = temp.toFixed(1) + " °C";
         }
       }
+
+   
+
+
     </script>
   </body>
 </html>
