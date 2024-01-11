@@ -3,50 +3,51 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Tempratuture Converter</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="box">
-        <h1 class="heading">Tempratuture Converter</h1>
-        <input type="number" id="temprature" value="0" /><span id="extra"></span>
-        <br>
-        <input type="radio" name="deg" id="celcius" checked /> <label for="celcius">Celsius to Fahrenheit</label>
-        <br />
-        <input type="radio" name="deg" id="Fahrenheit"  />  <label for="Fahrenheit">Fahrenheit to Celcius</label> <br />
-      
-        <button type="submit" name="Convert" id="submit" onclick="convert()" value="Convert"/>Convert</button>
-        <p id="result">32.0 °F</p>
+      <h1 class="heading">Tempratuture Converter</h1>
+      <input type="number" id="temprature" value="0" /><span id="extra"></span>
+      <br />
+      <input type="radio" name="deg" id="celcius" checked />
+      <label for="celcius">Celsius to Fahrenheit</label>
+      <br />
+      <input type="radio" name="deg" id="Fahrenheit" />
+      <label for="Fahrenheit">Fahrenheit to Celcius</label> <br />
+
+      <button
+        type="submit"
+        name="Convert"
+        id="submit"
+        onclick="convert()"
+        value="Convert">
+        Convert
+      </button>
+      <p id="result">32.0 °F</p>
     </div>
 
     <script>
       let submit = document.getElementById("submit");
       const celcius = document.getElementById("celcius");
-        const Fahrenheit = document.getElementById("Fahrenheit");
-        const extra= document.getElementById("extra");
+      const Fahrenheit = document.getElementById("Fahrenheit");
+      const extra = document.getElementById("extra");
       function convert() {
-       
         const temprature = document.getElementById("temprature").value;
         let result = document.getElementById("result");
-        
+
         let temp;
 
         if (celcius.checked) {
-            
           temp = (temprature * 9) / 5 + 32;
 
           result.textContent = temp.toFixed(1) + " °F";
-        }
-      
-        else {
+        } else {
           temp = ((temprature - 32) * 5) / 9;
           result.textContent = temp.toFixed(1) + " °C";
         }
       }
-
-   
-
-
     </script>
   </body>
 </html>
