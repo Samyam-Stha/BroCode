@@ -20,10 +20,10 @@ submit.onclick=function(){
         
         
         if(guess<ans){
-            error.textContent="Too low";
+            error.textContent="LOWER!";
         }
         else if(guess>ans){
-            error.textContent="Too high";
+            error.textContent="HIGHER!";
         }
         else{
             alert(` Congrats \n Number: ${ans} \n Attempts: ${attempt}`);
