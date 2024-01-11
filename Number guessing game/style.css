@@ -1,50 +1,45 @@
-*{
-
-margin: 0px;;
-padding: 0px;
-box-sizing: border-box;
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
-body{
-    height: 100vh;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items:center;
-   background:  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(https://img.freepik.com/free-vector/gradient-numerology-background_23-2150051043.jpg?w=740&t=st=1704977565~exp=1704978165~hmac=c0a301430a4383389563c9169f330dddb487243223d5c2e19107df26b1d84436 );
-   background-attachment: fixed;
-   background-repeat: no-repeat;
-   background-position: center;
-   background-size: cover;
-   color:rgb(224, 146, 0);
-
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(bg.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: rgb(224, 146, 0);
 }
-.box{
-  
-    max-width: 75%;
-    min-width: 50%;
-    text-align: center;
-    padding: 25px;
-    line-height: 50px;
-
+.box {
+  max-width: 75%;
+  min-width: 50%;
+  text-align: center;
+  padding: 25px;
+  line-height: 50px;
 }
 
-#num{
-    border-radius:10px;
-    border: none;
-    text-align: center;
-    height: 40px;
-    
-
+#num {
+  border-radius: 10px;
+  border: none;
+  text-align: center;
+  height: 40px;
 }
-#numsub{
-    cursor: pointer;
-    box-shadow: 0px 0px 10px 2px white;
-    border: 1px black solid;
-    border-radius: 6px;
-    height: 30px;
-    width: 100px;
+#numsub {
+  cursor: pointer;
+  box-shadow: 0px 0px 10px 2px white;
+  border: 1px black solid;
+  border-radius: 6px;
+  height: 30px;
+  width: 100px;
 }
-#numsub:active{
-    box-shadow: none;
-    scale: 0.94;
+#numsub:active {
+  box-shadow: none;
+  scale: 0.94;
 }
