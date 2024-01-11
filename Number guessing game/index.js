@@ -1,6 +1,6 @@
 
 let min=1;
-let max=10;
+let max=100;
 let ans=Math.floor(Math.random()*(max-min+1)+min);
 
 let attempt=0;
@@ -20,10 +20,10 @@ submit.onclick=function(){
         
         
         if(guess<ans){
-            error.textContent="LOWER!";
+            error.textContent="HIGHER!";
         }
         else if(guess>ans){
-            error.textContent="HIGHER!";
+            error.textContent="LOWER!";
         }
         else{
             alert(` Congrats \n Number: ${ans} \n Attempts: ${attempt}`);
