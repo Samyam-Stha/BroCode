@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="box">
+        <h1>Convert Temprature</h1>
+        <input type="number" id="temprature" value="0" /><br>
+        <input type="radio" name="deg" id="celcius" checked />Celsius to Farenheit
+        <br />
+        <input type="radio" name="deg" id="farenheit" /> Farenheit to Celcius <br />
+        <br />
+        <input type="submit" id="submit" onclick="convert()" />
+        <p id="result"></p>
+    </div>
+
+    <script>
+      let submit = document.getElementById("submit");
+
+      function convert() {
+        const celcius = document.getElementById("celcius");
+        const farenheit = document.getElementById("farenheit");
+        const temprature = document.getElementById("temprature").value;
+        let result = document.getElementById("result");
+        let temp;
+
+        if (celcius.checked) {
+          temp = (temprature * 9) / 5 + 32;
+
+          result.textContent = temp.toFixed(1) + " °F";
+        }
+      
+        else {
+          temp = ((temprature - 32) * 5) / 9;
+          result.textContent = temp.toFixed(1) + " °C";
+        }
+      }
+    </script>
+  </body>
+</html>

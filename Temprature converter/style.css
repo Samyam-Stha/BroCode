@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    border: 1px black solid;
+    padding: 25px;
+    height: 100vh;
+    text-align: center;
+}
+#temprature{
+    
+}
+
