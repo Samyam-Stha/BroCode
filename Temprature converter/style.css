@@ -39,6 +39,7 @@ input::-webkit-inner-spin-button {
     rgb(49, 35, 255)
   );
   -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
   background-clip: text;
 }
 /* Firefox */
